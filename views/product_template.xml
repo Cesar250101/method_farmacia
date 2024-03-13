@@ -1,0 +1,22 @@
+<odoo>
+  <data>
+
+    <record id="method_farmacia.product_template_form_view" model="ir.ui.view">
+      <field name="name">method.farmacia.product.template.form.view</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_form_view"/>
+      <field name="arch" type="xml">
+        <xpath expr="//page[@name='inventory']" position="after">
+          <page name="farmacia" string="Farmacia">
+                <group name="farmacia" string="Farmacia">
+                  <field name="tipo_comision"/>
+                  <field name="valor_comision"/>
+                  
+                </group>
+          </page>
+        </xpath>        
+      </field>
+    </record>
+
+  </data>
+</odoo>
